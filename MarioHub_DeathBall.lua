@@ -1,0 +1,490 @@
+-- ts file was generated at discord.gg/25ms
+
+local genv = getgenv()
+local _call5 = game:GetService('RunService')
+
+game:GetService('UserInputService')
+game:GetService('ReplicatedFirst')
+game:GetService('ReplicatedStorage')
+
+local _LocalPlayer12 = game:GetService('Players').LocalPlayer
+local MARIOHUB_KEY = 'MarioHub'
+local _ = genv.DeathBallAssist
+
+genv.DeathBallAssist = {
+    Running = true,
+    Settings = {
+        SpamRange = 22,
+        AutoCurve = false,
+        CurveDegrees = 40,
+        CurveAngles = {
+            Down = 40,
+            Right = 40,
+            Left = 40,
+            Up = 40,
+        },
+        AutoConnect = true,
+        CurveVerticalMode = 'Off',
+        Debug = false,
+        Keybinds = {
+            Debug = 'F9',
+            Unload = 'End',
+            AutoCurve = 'F7',
+            AutoParry = 'F6',
+            AutoSpam = 'F8',
+        },
+        DebugInterval = 0.75,
+        AutoParry = true,
+        ParryLead = 0.16,
+        RadiusMargin = 1.5,
+        PlayerRadius = 2.5,
+        SpamMinSpeed = 80,
+        SpamReturnWindow = 0.55,
+        SpamInterval = 0.08,
+        CurveMode = 'Right',
+        InputMode = 'Auto',
+        AutoSpam = true,
+    },
+    Version = 13,
+    Unlocked = true,
+    Attempts = 0,
+}
+
+Color3.fromRGB(14, 14, 14)
+
+local _call19 = Color3.fromRGB(20, 20, 20)
+
+Color3.fromRGB(245, 245, 245)
+Color3.fromRGB(34, 34, 34)
+
+local _call27 = Color3.fromRGB(235, 235, 235)
+
+Color3.fromRGB(10, 10, 10)
+
+local _call37 = Instance.new('ScreenGui')
+
+_call37.Name = 'VitalitysHubKeySystem'
+_call37.DisplayOrder = 81
+_call37.ResetOnSpawn = false
+_call37.IgnoreGuiInset = true
+_call37.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+_call37.Parent = _LocalPlayer12:WaitForChild('PlayerGui')
+
+local _call45 = Instance.new('Frame')
+
+_call45.AnchorPoint = Vector2.new(0.5, 0.5)
+_call45.Name = 'KeyPanel'
+_call45.Position = UDim2.new(0.5, 0, 0.5, 0)
+_call45.BackgroundColor3 = Color3.fromRGB(8, 8, 8)
+_call45.BorderSizePixel = 0
+_call45.Size = UDim2.fromOffset(360, 160)
+_call45.Parent = _call37
+
+local _call49 = Instance.new('UICorner')
+
+_call49.CornerRadius = UDim.new(0, 8)
+_call49.Parent = _call45
+
+local _call51 = Instance.new('UIStroke')
+
+_call51.Color = Color3.fromRGB(38, 38, 38)
+_call51.Thickness = 1
+_call51.Parent = _call45
+
+local _call53 = Instance.new('UIScale')
+
+_call53.Scale = 1
+_call53.Parent = _call45
+
+local _workspaceCurrentCamera54 = workspace.CurrentCamera
+
+type(_workspaceCurrentCamera54)
+type(getmetatable(_workspaceCurrentCamera54))
+
+local _call65 = Instance.new('TextLabel')
+
+_call65.TextColor3 = _call27
+_call65.Text = 'Vitalitys hub - key system'
+_call65.Font = Enum.Font.GothamBold
+_call65.Name = 'KeyTitle'
+_call65.Position = UDim2.fromOffset(16, 14)
+_call65.TextXAlignment = Enum.TextXAlignment.Left
+_call65.BackgroundTransparency = 1
+_call65.TextSize = 14
+_call65.Size = UDim2.new(1, -32, 0, 22)
+_call65.Parent = _call45
+
+local _call73 = Instance.new('TextBox')
+
+_call73.MultiLine = false
+_call73.TextColor3 = _call27
+_call73.Text = ''
+_call73.ClearTextOnFocus = false
+_call73.TextSize = 12
+_call73.PlaceholderColor3 = Color3.fromRGB(150, 150, 150)
+_call73.Font = Enum.Font.GothamMedium
+_call73.Name = 'KeyTextBox'
+_call73.Position = UDim2.fromOffset(16, 50)
+_call73.BackgroundColor3 = _call19
+_call73.PlaceholderText = 'Enter key'
+_call73.BorderSizePixel = 0
+_call73.Size = UDim2.new(1, -32, 0, 36)
+_call73.Parent = _call45
+
+local _call77 = Instance.new('UICorner')
+
+_call77.CornerRadius = UDim.new(0, 6)
+_call77.Parent = _call73
+
+local _call85 = Instance.new('TextButton')
+
+_call85.TextColor3 = _call27
+_call85.Text = 'Get key'
+_call85.AutoButtonColor = true
+_call85.Font = Enum.Font.GothamMedium
+_call85.Name = 'GetKey'
+_call85.Position = UDim2.new(0, 16, 0, 106)
+_call85.TextSize = 12
+_call85.BackgroundColor3 = _call19
+_call85.BorderSizePixel = 0
+_call85.Size = UDim2.new(0.5, -20, 0, 34)
+_call85.Parent = _call45
+
+local _call89 = Instance.new('UICorner')
+
+_call89.CornerRadius = UDim.new(0, 6)
+_call89.Parent = _call85
+
+local _call97 = Instance.new('TextButton')
+
+_call97.TextColor3 = _call27
+_call97.Text = 'Enter key'
+_call97.AutoButtonColor = true
+_call97.Font = Enum.Font.GothamMedium
+_call97.Name = 'EnterKey'
+_call97.Position = UDim2.new(0.5, 4, 0, 106)
+_call97.TextSize = 12
+_call97.BackgroundColor3 = _call19
+_call97.BorderSizePixel = 0
+_call97.Size = UDim2.new(0.5, -20, 0, 34)
+_call97.Parent = _call45
+
+local _call101 = Instance.new('UICorner')
+
+_call101.CornerRadius = UDim.new(0, 6)
+_call101.Parent = _call97
+
+local _call104 = _call85.Activated:Connect(function(...)
+    setclipboard('https://discord.gg/PKPggWPThM')
+
+    _call85.Text = 'Copied'
+
+    task.delay(1.5, function(...)
+        local _ = _call37 == _call37
+
+        _call85.Text = 'Get key'
+    end)
+end)
+local _call113 = _call97.Activated:Connect(function(...)
+    local enteredKey = tostring(_call73.Text or '')
+
+    if enteredKey == MARIOHUB_KEY then
+        genv.DeathBallAssist.Unlocked = true
+        _call97.Text = 'Unlocked'
+        _call37.Enabled = false
+    else
+        genv.DeathBallAssist.Unlocked = false
+        _call97.Text = 'Invalid key'
+        task.delay(1.5, function(...)
+            if _call37.Parent then
+                _call97.Text = 'Enter key'
+            end
+        end)
+    end
+end)
+local _call118 = _call73.FocusLost:Connect(function(...)
+    type(_call73.Text)
+
+    _call97.Text = 'Enter key'
+end)
+local _call124 = _call73:GetPropertyChangedSignal('Text'):Connect(function(...)
+    _call97.Text = 'Enter key'
+end)
+
+print('[vitalitys hub] Version 13 loaded.')
+
+return {
+    SetVisible = function(...)
+        local _127_vararg1 = ...
+        local _ = _127_vararg1.Running
+
+        return false
+    end,
+    Settings = {
+        SpamRange = 22,
+        AutoCurve = false,
+        CurveDegrees = 40,
+        CurveAngles = {
+            Down = 40,
+            Right = 40,
+            Left = 40,
+            Up = 40,
+        },
+        AutoConnect = true,
+        CurveVerticalMode = 'Off',
+        Debug = false,
+        Keybinds = {
+            Debug = 'F9',
+            Unload = 'End',
+            AutoCurve = 'F7',
+            AutoParry = 'F6',
+            AutoSpam = 'F8',
+        },
+        DebugInterval = 0.75,
+        AutoParry = true,
+        ParryLead = 0.16,
+        RadiusMargin = 1.5,
+        PlayerRadius = 2.5,
+        SpamMinSpeed = 80,
+        SpamReturnWindow = 0.55,
+        SpamInterval = 0.08,
+        CurveMode = 'Right',
+        InputMode = 'Auto',
+        AutoSpam = true,
+    },
+    Attempts = 0,
+    Destroy = function(...)
+        local _129_vararg1 = ...
+        local _ = _129_vararg1.Running
+
+        _129_vararg1.Running = false
+        _129_vararg1.Unlocked = false
+
+        _call5:UnbindFromRenderStep('DeathBallAssist_CurveAndInput')
+        _call104:Disconnect()
+        _call113:Disconnect()
+        _call118:Disconnect()
+        _call124:Disconnect()
+        _call37:Destroy()
+
+        local _ = genv.DeathBallAssist
+    end,
+    ToggleUI = function(...)
+        local _144_vararg1 = ...
+
+        return _144_vararg1:SetVisible(nil)
+    end,
+    CopyKeyLink = function(...)
+        local _147_vararg1 = ...
+        local _ = _147_vararg1.Running
+
+        setclipboard('https://discord.gg/PKPggWPThM')
+
+        return true
+    end,
+    SaveDiagnostics = function(...)
+        local _150_vararg1 = ...
+        local _call152 = _150_vararg1:GetDiagnostics()
+
+        _call152.StoredBalls = {}
+        _call152.AttemptEvents = {}
+        _call152.FlightTrace = {}
+
+        writefile('vitalitys_deathball_diagnostics.json', game:GetService('HttpService'):JSONEncode(_call152))
+
+        return true
+    end,
+    SubmitKey = function(...)
+        local _157_vararg1, _157_vararg2 = ...
+        local _ = _157_vararg1.Running
+        local enteredKey = tostring(_157_vararg2 or '')
+
+        if enteredKey == MARIOHUB_KEY then
+            _157_vararg1.Unlocked = true
+            genv.DeathBallAssist.Unlocked = true
+            return true, 'Unlocked'
+        end
+
+        _157_vararg1.Unlocked = false
+        genv.DeathBallAssist.Unlocked = false
+        return false, 'Invalid key'
+    end,
+    Unlocked = true,
+    Running = true,
+    SetCurveAngle = function(...)
+        local _159_vararg1 = ...
+        local _ = _159_vararg1.Running
+
+        return false
+    end,
+    TestDeflect = function(...)
+        local _161_vararg1 = ...
+        local _ = _161_vararg1.Running
+
+        return false
+    end,
+    ConnectGame = function(...)
+        local _163_vararg1 = ...
+        local _ = _163_vararg1.Running
+
+        return false
+    end,
+    ToggleFeature = function(...)
+        local _165_vararg1 = ...
+        local _ = _165_vararg1.Running
+
+        return false
+    end,
+    PrintDiagnostics = function(...)
+        local _167_vararg1 = ...
+        local _call169 = _167_vararg1:GetDiagnostics()
+
+        for _170, _170_2 in pairs(_call169) do end
+
+        local _Idx171 = _call169[_170]
+
+        type(_Idx171)
+
+        for _174, _174_2 in pairs(_Idx171) do end
+
+        local _Idx175 = _Idx171[_174]
+
+        type(_Idx175)
+
+        for _178, _178_2 in pairs(_Idx175) do end
+
+        local _Idx179 = _Idx175[_178]
+
+        type(_Idx179)
+
+        for _182, _182_2 in pairs(_Idx179) do end
+
+        local _Idx183 = _Idx179[_182]
+
+        type(_Idx183)
+
+        for _186, _186_2 in pairs(_Idx183) do end
+
+        local _Idx187 = _Idx183[_186]
+
+        type(_Idx187)
+
+        for _190, _190_2 in pairs(_Idx187) do end
+
+        local _Idx191 = _Idx187[_190]
+
+        type(_Idx191)
+
+        for _194, _194_2 in pairs(_Idx191) do end
+
+        local _Idx195 = _Idx191[_194]
+
+        type(_Idx195)
+
+        for _198, _198_2 in pairs(_Idx195) do end
+
+        local _Idx199 = _Idx195[_198]
+
+        type(_Idx199)
+
+        for _202, _202_2 in pairs(_Idx199) do end
+
+        local _Idx203 = _Idx199[_202]
+
+        type(_Idx203)
+
+        for _206, _206_2 in pairs(_Idx203) do end
+
+        local _Idx207 = _Idx203[_206]
+
+        type(_Idx207)
+
+        for _210, _210_2 in pairs(_Idx207) do end
+
+        local _Idx211 = _Idx207[_210]
+
+        type(_Idx211)
+
+        local _ = '' .. _170 .. '.' .. _174 .. '.' .. _178 .. '.' .. _182 .. '.' .. _186 .. '.' .. _190 .. '.' .. _194 .. '.' .. _198 .. '.' .. _202 .. '.' .. _206 .. '.' .. _210 .. '.'
+
+        for _214, _214_2 in pairs(_Idx211) do end
+
+        type(_Idx211[_214])
+        error('internal 583: <25ms: infinitelooperror>')
+    end,
+    SetKeybind = function(...)
+        local _217_vararg1 = ...
+        local _ = _217_vararg1.Running
+
+        return false, 'Hub locked'
+    end,
+    Version = 13,
+    GetDiagnostics = function(...)
+        local _219_vararg1 = ...
+
+        return {
+            LastParryGate = 'No parry requested',
+            AutoCurve = false,
+            CurvePackets = 0,
+            BallCount = 0,
+            BallSource = 'none',
+            CurveAngles = {
+                Down = 40,
+                Right = 40,
+                Left = 40,
+                Up = 40,
+            },
+            InputSource = 'none',
+            HasGetUpvalue = true,
+            Attempts = _219_vararg1.Attempts,
+            AbilityUpvalueTypes = {},
+            ControlsReady = false,
+            Unlocked = true,
+            SwordReady = 'nil',
+            BallDecisions = {},
+            OneWayPing = 0,
+            BallFieldTypes = {},
+            InputMethod = 'none',
+            CurveActive = false,
+            ModuleErrors = {},
+            PlayerActive = 'nil',
+            HasGetUpvalues = true,
+            BallSample = {},
+            PlayerVelocitySource = 'Assembly velocity',
+            SwordCooldown = 'nil',
+            RoundTripPing = 0,
+            InputPressed = 'nil',
+            CameraMovement = false,
+            SwordGate = 'Ready for input',
+            DeflectResultObserver = false,
+            InputMode = 'Auto',
+            InputEnabled = 'nil',
+            Status = 'Waiting for the game to load...',
+            InputAcknowledged = false,
+            AutoConnect = true,
+            LocalUserId = _LocalPlayer12.UserId,
+            CurveVerticalMode = 'Off',
+            InputFailures = {},
+            Debug = false,
+            Keybinds = {
+                Debug = 'F9',
+                Unload = 'End',
+                AutoCurve = 'F7',
+                AutoParry = 'F6',
+                AutoSpam = 'F8',
+            },
+            ButtonCooldown = 'nil',
+            AutoParry = true,
+            HasPlayerState = false,
+            HasCameraState = false,
+            RoundGate = 'Living character + local ball target',
+            PositionSource = 'none',
+            Version = _219_vararg1.Version,
+            Connecting = false,
+            UsesRuntimeScan = false,
+            CurveMode = 'Right',
+            ConnectionStarted = false,
+            CurveTransport = false,
+        }
+    end,
+}
