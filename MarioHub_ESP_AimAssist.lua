@@ -1,4 +1,4 @@
--- Mario Hub | Created By Klix | discord.gg/46v2XZu5xA
+-- Mario Hub | Created By Klix | discord.gg/mariohub
 
 local t1 = {}
 local t2 = {
