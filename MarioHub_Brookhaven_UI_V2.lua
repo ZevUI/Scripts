@@ -1,6 +1,6 @@
 -- Mario Hub Brookhaven standalone • UI V2 by Klix
 local MarioUI = (function()
--- Mario Hub UI V2 · made by Klix · discord.gg/46v2XZu5xA
+-- Mario Hub UI V2 · made by Klix · discord.gg/mariohub
 -- (c) Klix. Do not reupload or rebrand without credit. build 2026-10-03
 ---@author Klix  Mario Hub UI V2
 local TweenService = game:GetService("TweenService")
@@ -18,7 +18,7 @@ local LocalPlayer = Players.LocalPlayer
 local Library = {
     Version = "2.0",
     Author = "Klix",
-    Credit = "Mario Hub UI V2 by Klix · discord.gg/46v2XZu5xA",
+    Credit = "Mario Hub UI V2 by Klix · discord.gg/mariohub",
     Options = {},
     Toggles = {},
     Unloaded = false,
